@@ -3,6 +3,7 @@ import Profile from "./components/Profile"
 import ClientService from "./components/ClientService"
 import WorhH from './components/WorhH'
 import Follow from './components/Follow'
+import Reliability  from "./components/Reliability"
 export default function Page() {
     return <>
 
@@ -14,6 +15,7 @@ export default function Page() {
                     <ClientService />
                     <WorhH />
                     <Follow />
+                    <Reliability/>
                 </div>
             </div>
         </>

@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import { BiPlus, BiSmile, BiStar } from "react-icons/bi";
 import { BiFlag } from "react-icons/bi";
@@ -5,11 +6,28 @@ import { CgFigma } from 'react-icons/cg';
 import { DiReact } from 'react-icons/di';
 import { FaReact } from 'react-icons/fa';
 import { FiFigma } from 'react-icons/fi';
+import { motion } from 'framer-motion';
 const Nums = () => {
+    const FadeIn = {
+        init: {
+            opacity: 0,
+            // scale: -0.5
+        },
+        fin: {
+            opacity: 1,
+            y: 0,
+            scale: 1
+        }
+    }   
     return (
         <>
             <section className='grid  gap-4 pt-4 w-full md:grid-cols-2 grid-cols-1'>
-                <section className=' bg-[#141414] text-white  rounded-md my-4 py-4'>
+                <motion.section className=' bg-[#141414] text-white  rounded-md my-4 py-4'
+                    variants={FadeIn}
+                    initial="init"
+                    whileInView="fin"
+                    transition={{ duration: 1 }}
+                >
                     <div className='text-center'>
                         <h1> My Stacks </h1>
                         <h1 className='font-bold pb-2'> Tech Arsenal </h1>
@@ -36,7 +54,7 @@ const Nums = () => {
                             </div>
                         </div>
                     </div>
-                </section>
+                </motion.section>
                 <section className=" flex items-center gap-4 pb-4 ">
                     <div className=" px-2 pb-3 bg-[#141414] w-[30%] rounded-xl flex justify-center items-center flex-col  ">
                         <div className="relative">
