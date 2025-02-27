@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: main;
+  src: url("../public/font/Inter-VariableFont_opsz\,wght.ttf");
+}
+
+
+body {
+  color: var(--foreground);
+  background: #000000;
+  font-family: main;
+}
